@@ -179,16 +179,31 @@
   syncVideo();
   if (localStorage.getItem(CONSENT_KEY) === null) openCookiebar();
 
-  /* ---- Contact form (demo) ---- */
+  /* ---- Contact form -> Formspree (sends email to elias.uebel@comena.ai) ---- */
+  var FORMSPREE_ENDPOINT = 'https://formspree.io/f/mjgngwqp';
   var form = document.getElementById('contactForm');
   if (form) {
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       var btn = form.querySelector('button[type="submit"]');
       var original = btn.textContent;
-      btn.textContent = 'Vielen Dank! Wir melden uns.';
       btn.disabled = true;
-      setTimeout(function () { btn.textContent = original; btn.disabled = false; form.reset(); }, 3200);
+
+      fetch(FORMSPREE_ENDPOINT, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      })
+        .then(function (res) {
+          btn.textContent = res.ok ? 'Vielen Dank! Wir melden uns.' : 'Fehler – bitte erneut versuchen.';
+          if (res.ok) form.reset();
+        })
+        .catch(function () {
+          btn.textContent = 'Fehler – bitte erneut versuchen.';
+        })
+        .finally(function () {
+          setTimeout(function () { btn.textContent = original; btn.disabled = false; }, 3200);
+        });
     });
   }
 })();
