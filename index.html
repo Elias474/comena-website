@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="de-DE">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Comena</title>
+  <meta name="description" content="Comena automatisiert die Angebots- und Auftragserfassung von der Inbox ins ERP">
+  <link rel="icon" href="assets/9VEV39MrK39oEEc32gyFkGNIw0.svg" media="(prefers-color-scheme: light)">
+  <link rel="icon" href="assets/0OUMlu4STW3f8f03diUFj3irM.svg" media="(prefers-color-scheme: dark)">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Host+Grotesk:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=2">
+</head>
+<body>
+
+  <!-- Announcement bar -->
+  <div class="announce">
+    <span>Wir stellen ein. <a href="https://www.ycombinator.com/companies/comena/jobs" target="_blank" rel="noopener">Werde Teil unseres Teams!</a></span>
+  </div>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#top" class="brand" aria-label="Comena">
+        <img class="brand__mark brand__mark--light" src="assets/0OUMlu4STW3f8f03diUFj3irM.svg" alt="">
+        <img class="brand__mark brand__mark--dark" src="assets/9VEV39MrK39oEEc32gyFkGNIw0.svg" alt="">
+        <span class="brand__name">Comena</span>
+      </a>
+
+      <nav class="nav" id="nav">
+        <a href="#loesung">Produkt</a>
+        <a href="#partner">Über uns</a>
+        <a href="https://www.ycombinator.com/companies/comena/jobs" target="_blank" rel="noopener">Karriere</a>
+        <a href="#kontakt">Kontakt</a>
+      </nav>
+
+      <div class="header__actions">
+        <div class="lang" id="lang">
+          <button class="lang__btn" aria-label="Sprache wählen" aria-haspopup="true" aria-expanded="false">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.7 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.7-3.8-9S9.5 5.6 12 3z"/></svg>
+          </button>
+          <div class="lang__menu" role="menu">
+            <div class="lang__label">Select Language</div>
+            <button role="menuitem" class="is-active">German</button>
+            <button role="menuitem">English (United States)</button>
+          </div>
+        </div>
+        <a href="#kontakt" class="btn btn--demo">Demo buchen</a>
+        <button class="burger" id="burger" aria-label="Menü">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile menu -->
+  <div class="mobilemenu" id="mobilemenu">
+    <nav>
+      <a href="#loesung">Produkt</a>
+      <a href="#partner">Über uns</a>
+      <a href="https://www.ycombinator.com/companies/comena/jobs" target="_blank" rel="noopener">Karriere</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+    <a href="#kontakt" class="btn btn--demo">Demo buchen</a>
+  </div>
+
+  <main id="top">
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero__bg"></div>
+      <div class="hero__glow"></div>
+      <div class="hero__noise"></div>
+      <div class="hero__fade"></div>
+      <div class="container hero__inner">
+        <h1 class="hero__title">Weniger Tippen, mehr Verkaufen. Automatisierte Auftragserfassung</h1>
+        <p class="hero__sub">Comena automatisiert die Angebots- und Auftragserfassung von der Inbox ins ERP. Unsere KI Agenten lesen Bestellungen aus und finden die richtigen Artikel. So hat Ihr Vertrieb wieder Zeit für Kunden und aktives Verkaufen.</p>
+        <div class="hero__cta">
+          <a href="#kontakt" class="btn btn--white">Demo buchen</a>
+          <a href="#how" class="btn btn--ghost">So funktioniert's</a>
+        </div>
+      </div>
+
+      <div class="hero__logos">
+        <p class="hero__logos-label">Bewährt bei führenden Unternehmen der Industrie</p>
+        <div class="marquee">
+          <div class="marquee__track" id="marqueeTrack">
+            <!-- filled by JS (duplicated for seamless loop) -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Challenge -->
+    <section class="section" id="challenge">
+      <div class="container">
+        <div class="section__head section__head--center">
+          <span class="eyebrow">Die Herausforderung</span>
+          <h2 class="section__title">Keine Zeit für Kernaufgaben</h2>
+        </div>
+        <div class="cards4">
+          <article class="pcard">
+            <span class="pcard__num">01</span>
+            <h3 class="pcard__title">Qualifizierte Mitarbeiter verschwenden Zeit mit Eintippen</h3>
+            <p class="pcard__text">Ihre Vertriebsinnendienstler erfassen Daten manuell zwischen Posteingang und ERP – statt Kunden zu gewinnen und zu pflegen.</p>
+          </article>
+          <article class="pcard">
+            <span class="pcard__num">02</span>
+            <h3 class="pcard__title">Schwierige Artikelsuche</h3>
+            <p class="pcard__text">Manuelle Artikelsuche dauert lang und führt zu Fehlern. Nicht gefundene Artikel müssen kostspielig neu angelegt werden.</p>
+          </article>
+          <article class="pcard">
+            <span class="pcard__num">03</span>
+            <h3 class="pcard__title">Angebotserstellung dauert zu lange</h3>
+            <p class="pcard__text">Manuelle Bearbeitung dauert Tage statt Minuten. Eine schnelle Erstellung ist kritisch, um Aufträge zu gewinnen.</p>
+          </article>
+          <article class="pcard">
+            <span class="pcard__num">04</span>
+            <h3 class="pcard__title">Fachkräftemangel und lange Einarbeitung</h3>
+            <p class="pcard__text">Mitarbeiter gehen in Rente und wertvolles Wissen verloren. Neue Mitarbeiter zu finden, ist schwierig und die vollständige Einarbeitung dauert Jahre.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Solution -->
+    <section class="section" id="loesung">
+      <div class="container">
+        <div class="section__head">
+          <span class="eyebrow">Lösung</span>
+          <h2 class="section__title">Der Gamechanger für Ihre Auftragserfassung</h2>
+        </div>
+        <div class="solution">
+          <div class="accordion accordion--solution" id="solutionAcc">
+            <div class="acc-item is-open" data-img="assets/vP9bhPJwI2WXvm8ATmOyXBJ3Csw.jpg">
+              <button class="acc-head">
+                <span class="acc-title">Dokumente auslesen</span>
+                <span class="acc-icon"></span>
+              </button>
+              <div class="acc-body">
+                <p>Vorgänge werden von der KI automatisiert ausgelesen und relevante Informationen extrahiert. Egal ob PDFs, E-Mails, komplexe Anhänge oder handschriftliche Notizen.</p>
+                <p class="acc-plus">+ Keine zeitaufwändige manuelle Dateneingabe mehr erforderlich</p>
+              </div>
+            </div>
+            <div class="acc-item" data-img="assets/bJRzqcTDGfhjrTvjMjbaw6tSAM.jpg">
+              <button class="acc-head">
+                <span class="acc-title">Zuverlässiges Artikelmatching</span>
+                <span class="acc-icon"></span>
+              </button>
+              <div class="acc-body">
+                <p>Artikelpositionen werden auf die passende Artikelnummer umgeschlüsselt. Unsere KI Agenten verstehen kryptische Artikeltexte und durchforsten riesige Artikelstämme.</p>
+                <p class="acc-plus">+ Zuverlässiges Matching minimiert Zeit für Artikelsuche</p>
+              </div>
+            </div>
+            <div class="acc-item" data-img="assets/Tuf0OMgCpiZTzLPUoyTCjEwg0M.jpg">
+              <button class="acc-head">
+                <span class="acc-title">Nahtlose ERP Integration</span>
+                <span class="acc-icon"></span>
+              </button>
+              <div class="acc-body">
+                <p>Comena lässt sich an nahezu jedes ERP anbinden. Dokumente können automatisch im Dokumentenmanagementsystem abgelegt werden.</p>
+                <p class="acc-plus">+ Alles in Ihrem System erfasst mit einem Klick</p>
+              </div>
+            </div>
+          </div>
+          <div class="solution__media">
+            <img id="solutionImg" src="assets/vP9bhPJwI2WXvm8ATmOyXBJ3Csw.jpg" alt="Comena Dokumentenverarbeitung">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="section" id="how">
+      <div class="container">
+        <div class="section__head">
+          <span class="eyebrow">So funktioniert's</span>
+          <h2 class="section__title">Wie Comena Bestellungen verarbeitet</h2>
+        </div>
+        <div class="video">
+          <div class="video__inner" id="videoBox">
+            <iframe
+              class="video__iframe"
+              id="videoIframe"
+              title="Wie Comena Bestellungen verarbeitet"
+              src="about:blank"
+              data-src="https://www.youtube-nocookie.com/embed/yLCdcm7drAc"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+              loading="lazy"
+            ></iframe>
+            <div class="video__blocked" id="videoBlocked">
+              <h3>Video blockiert</h3>
+              <p>Bitte akzeptieren Sie Marketing-Cookies, um dieses YouTube-Video abzuspielen.</p>
+              <button class="btn btn--white" id="videoPlay">Cookie-Einstellungen öffnen</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Weitere Lösungen -->
+    <section class="section" id="weitere">
+      <div class="container">
+        <div class="section__head">
+          <span class="eyebrow">Weitere Lösungen</span>
+          <h2 class="section__title">Funktionen, die die Plattform erweitern</h2>
+        </div>
+
+        <div class="feature">
+          <div class="feature__text">
+            <h3>Automatisierte Umschlüsselung von Ausschreibungen</h3>
+            <p>Ausschreibungen und Excel-Listen mit Tausenden Positionen können auf die passenden Artikel des Artikelstamms umgeschlüsselt werden.</p>
+            <p class="feature__plus">+ Ausschreibungen schneller und mit weniger Zeitaufwand bearbeiten</p>
+            <a href="#kontakt" class="btn btn--demo">Demo buchen</a>
+          </div>
+          <div class="feature__media">
+            <img src="assets/cb6yJn9ngKvgDQkInbwomNCdXAg.jpg" alt="Automatisierte Umschlüsselung von Ausschreibungen">
+          </div>
+        </div>
+
+        <div class="feature feature--reverse">
+          <div class="feature__text">
+            <h3>Automatisiertes Erfassen von Auftragsbestätigungen</h3>
+            <p>Comena liest Auftragsbestätigungen aus, gleicht sie mit den Lieferantenbestellungen ab, und warnt bei Abweichungen.</p>
+            <p class="feature__plus">+ Einkauf kann schneller auf Abweichungen reagieren</p>
+            <a href="#kontakt" class="btn btn--demo">Demo buchen</a>
+          </div>
+          <div class="feature__media">
+            <img src="assets/lyJYtWwrS7RIzxJIzsAGaR2Q.jpg" alt="Automatisiertes Erfassen von Auftragsbestätigungen">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section" id="testimonials">
+      <div class="container">
+        <div class="section__head">
+          <span class="eyebrow">Kundenstimmen</span>
+          <h2 class="section__title">Was unsere Kunden sagen</h2>
+        </div>
+
+        <div class="tst">
+          <div class="tst__viewport">
+            <div class="tst__track" id="tstTrack">
+              <article class="tst__slide">
+                <div class="tst__photo"><img src="assets/Dxnd1LYJwO1xQ5SSEbbXH7bfjpQ.jpeg" alt="Christian Paal"></div>
+                <div class="tst__body">
+                  <h3 class="tst__head">75% Zeitersparnis</h3>
+                  <div class="tst__quote">
+                    <p>"Bis jetzt können schon 95 % aller Aufträge über Comena abgearbeitet werden, ein Großteil davon sogar voll automatisch und das rund um die Uhr.</p>
+                    <p>Die Artikelsuche funktioniert sehr gut, sodass der Zeitaufwand für die Auftragserfassung um 75% gesunken ist.</p>
+                    <p>Wir sind begeistert von Comena, da das Team unsere Wünsche schnell umsetzt."</p>
+                  </div>
+                  <div class="tst__foot">
+                    <div class="tst__person">
+                      <strong>Christian Paal</strong>
+                      <span>Geschäftsführer, Alexander Paal GmbH</span>
+                    </div>
+                    <span class="tst__count"><em>1</em>/3</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="tst__slide">
+                <div class="tst__photo"><img src="assets/Nsu8yReQFkta6NTRYhaXmuRGerM.jpg" alt="Rafael Hennemann"></div>
+                <div class="tst__body">
+                  <h3 class="tst__head">Enge Partnerschaft</h3>
+                  <div class="tst__quote">
+                    <p>"Comena überzeugt vor allem durch das präzise Auslesen von selbst äußerst komplexen Aufträgen und Auftragsbestätigungen.</p>
+                    <p>Ebenso begeistert uns die Zusammenarbeit: Wir erleben eine enge Partnerschaft mit extrem schnellen Kommunikationswegen – nahezu rund um die Uhr.</p>
+                    <p>Unsere Wünsche werden dabei stets pragmatisch und zügig umgesetzt."</p>
+                  </div>
+                  <div class="tst__foot">
+                    <div class="tst__person">
+                      <strong>Rafael Hennemann</strong>
+                      <span>Leiter Auftragsmanagement &amp; Disposition, PIEL Die Technische Großhandlung GmbH</span>
+                    </div>
+                    <span class="tst__count"><em>2</em>/3</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="tst__slide">
+                <div class="tst__photo"><img src="assets/EmEkC9G9jd4z1K38T1Y4emyq2pw.jpeg" alt="Stefanie Ettinger"></div>
+                <div class="tst__body">
+                  <h3 class="tst__head">Mehr Zeit für aktiven Vertrieb</h3>
+                  <div class="tst__quote">
+                    <p>"Durch Comena gewinnt unser Team spürbar Zeit für aktiven Vertrieb, Kundengespräche sowie Cross- und Upselling.</p>
+                    <p>Die KI stößt auf Begeisterung in unserem Team und wird von mehreren Nutzern bei 99% aller eingehenden Aufträge genutzt.</p>
+                    <p>Die kurzen Kommunikationswege, praxisnahe Workshops und schnelle Umsetzung unserer Anforderungen machen Comena für uns zu einem echten Partner."</p>
+                  </div>
+                  <div class="tst__foot">
+                    <div class="tst__person">
+                      <strong>Stefanie Ettinger</strong>
+                      <span>Leitung Vertrieb &amp; Marketing, ETTINGER GmbH</span>
+                    </div>
+                    <span class="tst__count"><em>3</em>/3</span>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="tst__nav">
+            <button class="tst__arrow" id="tstPrev" aria-label="Zurück"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M15 5l-7 7 7 7"/></svg></button>
+            <button class="tst__arrow" id="tstNext" aria-label="Weiter"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 5l7 7-7 7"/></svg></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bento / Partner -->
+    <section class="section" id="partner">
+      <div class="container">
+        <div class="section__head">
+          <span class="eyebrow">Ihr Partner</span>
+          <h2 class="section__title">Comena macht den Unterschied</h2>
+        </div>
+        <div class="bento">
+          <article class="bento__cell bento__cell--wide bento__cell--img" style="background-image:url('assets/PmT4CncgUuAOSGuRD8bO7Bfqws.jpg')">
+            <div class="bento__content">
+              <h3>75% Zeitersparnis bei der Erfassung</h3>
+              <p>Wieder Zeit für echten Vertrieb, Nachfassen von Angeboten, und direkten Kundenkontakt.</p>
+            </div>
+          </article>
+          <article class="bento__cell bento__cell--navy">
+            <div class="bento__content">
+              <h3>Als erster das Angebot abschicken</h3>
+              <p>Durch automatisierte Erfassung und Artikelsuche schneller sein als der Wettbewerb.</p>
+            </div>
+          </article>
+          <article class="bento__cell bento__cell--navy bento__cell--streak">
+            <div class="bento__content">
+              <h3>Fachkräftemangel entgegenwirken</h3>
+              <p>Personalengpässe abfedern und das Wissen von erfahrenen Mitarbeitern mit der KI sichern.</p>
+            </div>
+          </article>
+          <article class="bento__cell bento__cell--navy bento__cell--streak">
+            <div class="bento__content">
+              <h3>Integration in weniger als zwei Wochen</h3>
+              <p>Synchronisation von Daten und Vorgängen zwischen Comena und Ihrem ERP in unter zwei Wochen.</p>
+            </div>
+          </article>
+          <article class="bento__cell bento__cell--navy">
+            <div class="bento__content">
+              <h3>Artikelsuche leicht gemacht</h3>
+              <p>Nie wieder einen Artikel doppelt anlegen oder stundenlang nach der richtigen Artikelnummer suchen.</p>
+            </div>
+          </article>
+          <article class="bento__cell bento__cell--wide bento__cell--img" style="background-image:url('assets/RMCBFYW8duUggHG24Xw8RyoA4U.jpg')">
+            <div class="bento__content">
+              <h3>Ihr Partner</h3>
+              <p>Wir arbeiten eng mit Ihrem Team zusammen, um Ihre Prozesse genau zu verstehen und das Produkt anzupassen.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
+      <div class="container container--narrow">
+        <div class="section__head section__head--center">
+          <span class="eyebrow">FAQ</span>
+          <h2 class="section__title">Häufige Fragen</h2>
+        </div>
+        <div class="accordion accordion--faq" id="faqAcc">
+          <div class="acc-item is-open">
+            <button class="acc-head"><span class="acc-title">Was ist Comena?</span><span class="acc-icon"></span></button>
+            <div class="acc-body"><p>Comena ist eine KI-Plattform, die die B2B-Auftragserfassung für Großhändler und Hersteller automatisiert, vom Posteingang bis zum ERP.</p></div>
+          </div>
+          <div class="acc-item">
+            <button class="acc-head"><span class="acc-title">Wie bearbeitet Comena Bestellungen und Anfragen?</span><span class="acc-icon"></span></button>
+            <div class="acc-body"><p>Ihre Vertriebsinnendienstler können Bestellungen per E-Mail an unsere KI weiterleiten. Die KI extrahiert dann alle relevanten Informationen, schlüsselt die Produktbeschreibungen richtig um und zeigt die Informationen Ihrem Vertriebsmitarbeiter zur Genehmigung. Dann wird die Bestellung an Ihr ERP gesendet.</p></div>
+          </div>
+          <div class="acc-item">
+            <button class="acc-head"><span class="acc-title">Was macht Comena anders als andere Auftragsbearbeitungstools?</span><span class="acc-icon"></span></button>
+            <div class="acc-body"><p>Comena verwendet KI-Agenten, um intelligent alle relevanten Informationen zu extrahieren und Freitext-Produktbeschreibungen Ihren Artikeln zuzuordnen, ohne dass eine vorherige manuelle Einrichtung für jeden neuen Kunden erforderlich ist, wie bei EDI oder PDF2EDI.</p></div>
+          </div>
+          <div class="acc-item">
+            <button class="acc-head"><span class="acc-title">Kann Comena in unser bestehendes ERP-System integriert werden?</span><span class="acc-icon"></span></button>
+            <div class="acc-body"><p>Ja, Comena integriert sich nahtlos in fast jedes ERP. Wenn Ihr ERP bereits EDI unterstützt, kann Comena sogar die bestehenden APIs nutzen, um Bestellungen an Ihr ERP zu senden.</p></div>
+          </div>
+          <div class="acc-item">
+            <button class="acc-head"><span class="acc-title">Welche Arten von Unternehmen profitieren am meisten von Comena?</span><span class="acc-icon"></span></button>
+            <div class="acc-body"><p>Großhändler und Hersteller, die große Mengen an Bestellungen und Ausschreibungen bearbeiten, sehen den größten Nutzen, insbesondere solche mit großen Produktkatalogen.</p></div>
+          </div>
+          <div class="acc-item">
+            <button class="acc-head"><span class="acc-title">Wie viel Zeit können wir mit Comena sparen?</span><span class="acc-icon"></span></button>
+            <div class="acc-body"><p>Unsere Kunden reduzieren typischerweise die Auftragsbearbeitungszeit um 75%, wodurch sich Vertriebsteams auf Kundenkontakt konzentrieren können, anstatt auf manuelle Erfassung.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="kontakt">
+      <div class="contact__bg"></div>
+      <div class="container">
+        <div class="contact__card">
+          <div class="contact__left">
+            <span class="eyebrow eyebrow--light">Kontakt</span>
+            <h2 class="contact__title">Buchen Sie ein persönliches Gespräch</h2>
+            <p class="contact__sub">Beschreiben Sie uns Ihre Herausforderungen – gemeinsam prüfen wir, wie Comena Mehrwert schaffen kann.</p>
+            <div class="contact__person">
+              <img src="assets/oAig1neGUshdpD9jhjAPTaYk.jpeg" alt="Jiehua Wu">
+              <div>
+                <strong>Jiehua Wu</strong>
+                <span>CEO, Comena</span>
+              </div>
+            </div>
+            <div class="contact__phone">
+              <span>oder rufen Sie uns an</span>
+              <a href="tel:+4915679748250">+49 15679 748250</a>
+            </div>
+          </div>
+          <form class="contact__form" id="contactForm">
+            <label>Name *
+              <input type="text" name="name" placeholder="Max Mustermann" required>
+            </label>
+            <label>Email *
+              <input type="email" name="email" placeholder="max@mustermann.com" required>
+            </label>
+            <label>Telefonnummer
+              <input type="tel" name="phone" placeholder="Ihre Telefonnummer">
+            </label>
+            <label>Nachricht
+              <textarea name="message" rows="4" placeholder="Ihre Nachricht . . ."></textarea>
+            </label>
+            <button type="submit" class="btn btn--white btn--block">Nachricht senden</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__badges">
+          <div class="badge">
+            <img class="badge__icon" src="assets/uezCJl05fBIRH6gZrVGJKELqyKw.svg" alt="Deutschland">
+            <div><strong>DSGVO konform</strong><span>Hosting in Deutschland</span></div>
+          </div>
+          <div class="badge">
+            <span class="badge__icon badge__yc">Y</span>
+            <div><strong>Unterstützt von</strong><span>Y Combinator</span></div>
+          </div>
+          <div class="badge">
+            <span class="badge__icon badge__shield">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#1f9d55" stroke-width="1.8"><path d="M12 2l8 3v6c0 5-3.5 8.5-8 11-4.5-2.5-8-6-8-11V5z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg>
+            </span>
+            <div><strong>Sicherheit nach Industriestandards</strong><span>DIN ISO/IEC 27001 &amp;<br>DIN ISO/IEC 27018 zertifizierte Server</span></div>
+          </div>
+        </div>
+
+        <div class="footer__cols">
+          <div class="footer__col">
+            <h4>Unternehmen</h4>
+            <a href="#partner">Über uns</a>
+            <a href="https://www.ycombinator.com/companies/comena/jobs" target="_blank" rel="noopener">Karriere</a>
+            <a href="#kontakt">Kontakt</a>
+            <a href="https://www.linkedin.com/company/comena-ai" target="_blank" rel="noopener">LinkedIn</a>
+          </div>
+          <div class="footer__col">
+            <h4>Produkt</h4>
+            <a href="#loesung">Auftragsverarbeitung</a>
+            <a href="#weitere">Umschlüsselung von Ausschreibungen</a>
+            <a href="#weitere">Verarbeitung von Auftrgsbestätigungen</a>
+          </div>
+          <div class="footer__col">
+            <h4>Rechtliches</h4>
+            <a href="./impressum">Impressum</a>
+            <a href="./datenschutz">Datenschutz</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <a href="#top" class="brand brand--footer">
+          <img class="brand__mark" src="assets/9VEV39MrK39oEEc32gyFkGNIw0.svg" alt="">
+          <span class="brand__name">Comena</span>
+        </a>
+        <span class="footer__copy">© Comena Technologies GmbH 2026</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cookie consent banner -->
+  <div class="cookiebar" id="cookiebar" role="dialog" aria-live="polite" aria-label="Cookie-Einstellungen">
+    <h4>Cookie-Einstellungen</h4>
+    <p>Wir nutzen Marketing-Cookies, um eingebettete YouTube-Videos anzuzeigen. Sie können dem zustimmen oder ablehnen.</p>
+    <div class="cookiebar__actions">
+      <button class="btn btn--demo" id="cookieAccept">Akzeptieren</button>
+      <button class="btn btn--ghost" id="cookieDecline">Ablehnen</button>
+    </div>
+  </div>
+
+  <script src="script.js?v=2"></script>
+</body>
+</html>
