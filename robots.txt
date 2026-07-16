@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://elias474.github.io/comena-website/sitemap.xml
+Sitemap: https://comena.info/sitemap.xml
