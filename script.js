@@ -6,9 +6,10 @@
   var header = document.getElementById('header');
   var hero = document.querySelector('.hero');
   function onScroll() {
-    var threshold = hero ? hero.offsetTop + Math.min(hero.offsetHeight - 120, window.innerHeight - 120) : 120;
+    // pages without a hero (Impressum, Datenschutz) keep the solid header
+    if (!hero) { header.classList.add('is-solid'); return; }
     // switch once we've scrolled past most of the hero
-    var trigger = hero ? hero.getBoundingClientRect().bottom - 120 : 200;
+    var trigger = hero.getBoundingClientRect().bottom - 120;
     if (trigger <= 0) header.classList.add('is-solid');
     else header.classList.remove('is-solid');
   }
@@ -17,21 +18,23 @@
 
   /* ---- Customer logo marquee (duplicated for seamless loop) ---- */
   var logos = [
-    { src: 'assets/NHcsBoHEkEAnIKqWGTByEP3ExYM.png', alt: 'BÄCKER' },
-    { src: 'assets/A9imE3UzvnpNBcsCySepoFHAbc.png', alt: 'ELSINGHORST' },
-    { src: 'assets/Htn8G3OHSVeqTx0ICCN839FJw.png', alt: 'paal' },
-    { src: 'assets/MObOzi0CEkmJJqALNGlmN4X2aU.png', alt: 'RUBIX' },
-    { src: 'assets/QzucNNOx0YfhuB2E33ao1x2gJwU.png', alt: 'krumm&andré' },
-    { src: 'assets/iS5UzAlxZQP9FCVD4TL2solp3eM.png', alt: 'hapare' },
-    { src: 'assets/VgTJzS8Fkk7ZcMrLGe9pwFzjUs.png', alt: 'PIEL' },
-    { src: 'assets/eklc99u8YSS1hqMYk8z2hiKnOWA.png', alt: 'ETTINGER' }
+    { src: 'assets/NHcsBoHEkEAnIKqWGTByEP3ExYM.png', alt: 'BÄCKER', w: 630, h: 120 },
+    { src: 'assets/A9imE3UzvnpNBcsCySepoFHAbc.png', alt: 'ELSINGHORST', w: 353, h: 120 },
+    { src: 'assets/Htn8G3OHSVeqTx0ICCN839FJw.png', alt: 'paal', w: 358, h: 120 },
+    { src: 'assets/MObOzi0CEkmJJqALNGlmN4X2aU.png', alt: 'RUBIX', w: 390, h: 120 },
+    { src: 'assets/QzucNNOx0YfhuB2E33ao1x2gJwU.png', alt: 'krumm&andré', w: 844, h: 120 },
+    { src: 'assets/iS5UzAlxZQP9FCVD4TL2solp3eM.png', alt: 'hapare', w: 530, h: 120 },
+    { src: 'assets/VgTJzS8Fkk7ZcMrLGe9pwFzjUs.png', alt: 'PIEL', w: 573, h: 120 },
+    { src: 'assets/eklc99u8YSS1hqMYk8z2hiKnOWA.png', alt: 'ETTINGER', w: 717, h: 162 }
   ];
   var track = document.getElementById('marqueeTrack');
   if (track) {
+    // subpages set data-base so the asset paths resolve from any depth
+    var base = track.getAttribute('data-base') || '';
     var html = '';
     for (var r = 0; r < 2; r++) {
       logos.forEach(function (l) {
-        html += '<img src="' + l.src + '" alt="' + l.alt + '">';
+        html += '<img src="' + base + l.src + '" alt="' + l.alt + '" width="' + l.w + '" height="' + l.h + '" loading="lazy" decoding="async">';
       });
     }
     track.innerHTML = html;

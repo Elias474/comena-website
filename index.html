@@ -10,6 +10,9 @@
   <meta name="robots" content="index, follow">
   <meta name="author" content="Comena Technologies GmbH">
   <link rel="canonical" href="https://comena.info/">
+  <link rel="alternate" href="https://comena.info/" hreflang="de-DE">
+  <link rel="alternate" href="https://comena.info/en/" hreflang="en-US">
+  <link rel="alternate" href="https://comena.info/" hreflang="x-default">
   <meta name="theme-color" content="#0a1636">
 
   <!-- Open Graph -->
@@ -34,23 +37,61 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Host+Grotesk:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=2">
+  <link rel="stylesheet" href="styles.css?v=4">
 
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Comena",
-    "legalName": "Comena Technologies GmbH",
-    "url": "https://comena.info/",
-    "logo": "https://comena.info/assets/9VEV39MrK39oEEc32gyFkGNIw0.svg",
-    "foundingDate": "2025",
-    "description": "Comena bietet automatisierte Auftragserfassung mit KI für Großhändler und Hersteller – von der Angebotserfassung bis zur direkten ERP-Anbindung.",
-    "knowsAbout": ["automatisierte Auftragserfassung", "KI Auftragserfassung", "Angebotserfassung", "ERP Integration", "Auftragsmanagement"],
-    "sameAs": [
-      "https://www.linkedin.com/company/comena-ai",
-      "https://www.ycombinator.com/companies/comena"
-    ]
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Comena",
+      "legalName": "Comena Technologies GmbH",
+      "url": "https://comena.info/",
+      "logo": "https://comena.info/assets/9VEV39MrK39oEEc32gyFkGNIw0.svg",
+      "foundingDate": "2025",
+      "@id": "https://comena.info/#organization",
+      "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Spitzwegstr. 26a",
+          "postalCode": "85521",
+          "addressLocality": "Ottobrunn",
+          "addressRegion": "Bayern",
+          "addressCountry": "DE"
+      },
+      "email": "jiehua.wu@comena.ai",
+      "telephone": "+49-15679-748250",
+      "vatID": "DE454055503",
+      "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+49-15679-748250",
+          "email": "jiehua.wu@comena.ai",
+          "contactType": "sales",
+          "availableLanguage": [
+              "de",
+              "en"
+          ]
+      },
+      "founder": [
+          {
+              "@type": "Person",
+              "name": "Jiehua Wu"
+          },
+          {
+              "@type": "Person",
+              "name": "Almo Sutedjo"
+          }
+      ],
+      "description": "Comena bietet automatisierte Auftragserfassung mit KI für Großhändler und Hersteller – von der Angebotserfassung bis zur direkten ERP-Anbindung.",
+      "knowsAbout": [
+          "automatisierte Auftragserfassung",
+          "KI Auftragserfassung",
+          "Angebotserfassung",
+          "ERP Integration",
+          "Auftragsmanagement"
+      ],
+      "sameAs": [
+          "https://www.linkedin.com/company/comena-ai",
+          "https://www.ycombinator.com/companies/comena"
+      ]
   }
   </script>
   <script type="application/ld+json">
@@ -121,14 +162,14 @@
   <header class="header" id="header">
     <div class="container header__inner">
       <a href="#top" class="brand" aria-label="Comena">
-        <img class="brand__mark brand__mark--light" src="assets/0OUMlu4STW3f8f03diUFj3irM.svg" alt="Comena Logo">
-        <img class="brand__mark brand__mark--dark" src="assets/9VEV39MrK39oEEc32gyFkGNIw0.svg" alt="Comena Logo">
+        <img class="brand__mark brand__mark--light" src="assets/0OUMlu4STW3f8f03diUFj3irM.svg" alt="Comena Logo" width="64" height="64">
+        <img class="brand__mark brand__mark--dark" src="assets/9VEV39MrK39oEEc32gyFkGNIw0.svg" alt="Comena Logo" width="64" height="64">
         <span class="brand__name">Comena</span>
       </a>
 
       <nav class="nav" id="nav">
         <a href="#loesung">Produkt</a>
-        <a href="#partner">Über uns</a>
+        <a href="ueber-uns/">Über uns</a>
         <a href="https://www.ycombinator.com/companies/comena/jobs" target="_blank" rel="noopener">Karriere</a>
         <a href="#kontakt">Kontakt</a>
       </nav>
@@ -140,8 +181,8 @@
           </button>
           <div class="lang__menu" role="menu">
             <div class="lang__label">Select Language</div>
-            <button role="menuitem" class="is-active">German</button>
-            <button role="menuitem">English (United States)</button>
+            <a role="menuitem" class="is-active" href="./" hreflang="de-DE">German</a>
+            <a role="menuitem" href="en/" hreflang="en-US">English (United States)</a>
           </div>
         </div>
         <a href="#kontakt" class="btn btn--demo">Demo buchen</a>
@@ -156,7 +197,7 @@
   <div class="mobilemenu" id="mobilemenu">
     <nav>
       <a href="#loesung">Produkt</a>
-      <a href="#partner">Über uns</a>
+      <a href="ueber-uns/">Über uns</a>
       <a href="https://www.ycombinator.com/companies/comena/jobs" target="_blank" rel="noopener">Karriere</a>
       <a href="#kontakt">Kontakt</a>
     </nav>
@@ -263,7 +304,7 @@
             </div>
           </div>
           <div class="solution__media">
-            <img id="solutionImg" src="assets/ki-auftragserfassung-dokumente-auslesen.jpg" alt="Automatisierte Auftragserfassung mit Comena – KI liest Dokumente aus und ordnet Artikel zu" loading="lazy" decoding="async">
+            <img id="solutionImg" src="assets/ki-auftragserfassung-dokumente-auslesen.jpg" alt="Automatisierte Auftragserfassung mit Comena – KI liest Dokumente aus und ordnet Artikel zu" loading="lazy" decoding="async" width="1200" height="1202">
           </div>
         </div>
       </div>
@@ -314,7 +355,7 @@
             <a href="#kontakt" class="btn btn--demo">Demo buchen</a>
           </div>
           <div class="feature__media">
-            <img src="assets/ausschreibungen-automatisiert-umschluesseln.jpg" alt="Automatisierte Umschlüsselung von Ausschreibungen" loading="lazy" decoding="async">
+            <img src="assets/ausschreibungen-automatisiert-umschluesseln.jpg" alt="Automatisierte Umschlüsselung von Ausschreibungen" loading="lazy" decoding="async" width="1423" height="1423">
           </div>
         </div>
 
@@ -326,7 +367,7 @@
             <a href="#kontakt" class="btn btn--demo">Demo buchen</a>
           </div>
           <div class="feature__media">
-            <img src="assets/auftragsbestaetigungen-automatisch-erfassen.jpg" alt="Automatisiertes Erfassen von Auftragsbestätigungen" loading="lazy" decoding="async">
+            <img src="assets/auftragsbestaetigungen-automatisch-erfassen.jpg" alt="Automatisiertes Erfassen von Auftragsbestätigungen" loading="lazy" decoding="async" width="1423" height="1423">
           </div>
         </div>
       </div>
@@ -344,7 +385,7 @@
           <div class="tst__viewport">
             <div class="tst__track" id="tstTrack">
               <article class="tst__slide">
-                <div class="tst__photo"><img src="assets/Dxnd1LYJwO1xQ5SSEbbXH7bfjpQ.jpeg" alt="Christian Paal" loading="lazy" decoding="async"></div>
+                <div class="tst__photo"><img src="assets/Dxnd1LYJwO1xQ5SSEbbXH7bfjpQ.jpg" alt="Christian Paal" loading="lazy" decoding="async" width="600" height="600"></div>
                 <div class="tst__body">
                   <h3 class="tst__head">75% Zeitersparnis</h3>
                   <div class="tst__quote">
@@ -363,7 +404,7 @@
               </article>
 
               <article class="tst__slide">
-                <div class="tst__photo"><img src="assets/Nsu8yReQFkta6NTRYhaXmuRGerM.jpg" alt="Rafael Hennemann" loading="lazy" decoding="async"></div>
+                <div class="tst__photo"><img src="assets/Nsu8yReQFkta6NTRYhaXmuRGerM.jpg" alt="Rafael Hennemann" loading="lazy" decoding="async" width="600" height="672"></div>
                 <div class="tst__body">
                   <h3 class="tst__head">Enge Partnerschaft</h3>
                   <div class="tst__quote">
@@ -382,7 +423,7 @@
               </article>
 
               <article class="tst__slide">
-                <div class="tst__photo"><img src="assets/EmEkC9G9jd4z1K38T1Y4emyq2pw.jpeg" alt="Stefanie Ettinger" loading="lazy" decoding="async"></div>
+                <div class="tst__photo"><img src="assets/EmEkC9G9jd4z1K38T1Y4emyq2pw.jpg" alt="Stefanie Ettinger" loading="lazy" decoding="async" width="400" height="400"></div>
                 <div class="tst__body">
                   <h3 class="tst__head">Mehr Zeit für aktiven Vertrieb</h3>
                   <div class="tst__quote">
@@ -503,7 +544,7 @@
             <h2 class="contact__title">Buchen Sie ein persönliches Gespräch</h2>
             <p class="contact__sub">Beschreiben Sie uns Ihre Herausforderungen – gemeinsam prüfen wir, wie Comena Mehrwert schaffen kann.</p>
             <div class="contact__person">
-              <img src="assets/oAig1neGUshdpD9jhjAPTaYk.jpeg" alt="Jiehua Wu" loading="lazy" decoding="async">
+              <img src="assets/oAig1neGUshdpD9jhjAPTaYk.jpg" alt="Jiehua Wu" loading="lazy" decoding="async" width="200" height="166">
               <div>
                 <strong>Jiehua Wu</strong>
                 <span>CEO, Comena</span>
@@ -541,11 +582,11 @@
       <div class="footer__top">
         <div class="footer__badges">
           <div class="badge">
-            <img class="badge__icon" src="assets/uezCJl05fBIRH6gZrVGJKELqyKw.svg" alt="Deutschland">
+            <img class="badge__icon" src="assets/uezCJl05fBIRH6gZrVGJKELqyKw.svg" alt="Deutschland" width="1000" height="600">
             <div><strong>DSGVO konform</strong><span>Hosting in Deutschland</span></div>
           </div>
           <div class="badge">
-            <span class="badge__icon badge__yc">Y</span>
+            <img class="badge__icon" src="assets/logo-y-combinator-badge.svg" alt="Unterstützt von Y Combinator" width="256" height="256">
             <div><strong>Unterstützt von</strong><span>Y Combinator</span></div>
           </div>
           <div class="badge">
@@ -558,29 +599,29 @@
 
         <div class="footer__cols">
           <div class="footer__col">
-            <h4>Unternehmen</h4>
-            <a href="#partner">Über uns</a>
+            <h3>Unternehmen</h3>
+            <a href="ueber-uns/">Über uns</a>
             <a href="https://www.ycombinator.com/companies/comena/jobs" target="_blank" rel="noopener">Karriere</a>
             <a href="#kontakt">Kontakt</a>
             <a href="https://www.linkedin.com/company/comena-ai" target="_blank" rel="noopener">LinkedIn</a>
           </div>
           <div class="footer__col">
-            <h4>Produkt</h4>
+            <h3>Produkt</h3>
             <a href="#loesung">Auftragsverarbeitung</a>
             <a href="#weitere">Umschlüsselung von Ausschreibungen</a>
-            <a href="#weitere">Verarbeitung von Auftrgsbestätigungen</a>
+            <a href="#weitere">Verarbeitung von Auftragsbestätigungen</a>
           </div>
           <div class="footer__col">
-            <h4>Rechtliches</h4>
-            <a href="./impressum">Impressum</a>
-            <a href="./datenschutz">Datenschutz</a>
+            <h3>Rechtliches</h3>
+            <a href="impressum/">Impressum</a>
+            <a href="datenschutz/">Datenschutz</a>
           </div>
         </div>
       </div>
 
       <div class="footer__bottom">
         <a href="#top" class="brand brand--footer">
-          <img class="brand__mark" src="assets/9VEV39MrK39oEEc32gyFkGNIw0.svg" alt="Comena Logo">
+          <img class="brand__mark" src="assets/9VEV39MrK39oEEc32gyFkGNIw0.svg" alt="Comena Logo" width="64" height="64">
           <span class="brand__name">Comena</span>
         </a>
         <span class="footer__copy">© Comena Technologies GmbH 2026</span>
@@ -598,6 +639,6 @@
     </div>
   </div>
 
-  <script src="script.js?v=2"></script>
+  <script src="script.js?v=4"></script>
 </body>
 </html>
